@@ -102,15 +102,20 @@ var emp=[{"id":1,"first_name":"Bartie","last_name":"Tames","email":"btames0@utex
 let display = () => {
     console.log("Test Case 123");
     let rows = "";
-    for (let i = 0; i <= emp.length - 1; i++) {
-      rows =
-        rows +
-        `<tr>  <td>${emp[i].id}</td>
-      <td>${emp[i].first_name}</td>
-      <td>${emp[i].last_name}</td>
-      <td>${emp[i].email}</td>
-      <td>${emp[i].gender}</td>
-      <td>${emp[i].phone}</td> </tr>`;
+    let i=0;
+    while(i<=emp.length-1){
+      rows=
+       rows+
+       `<tr>
+        <td>${emp[i].id}</td>
+        <td>${emp[i].first_name}</td>
+        <td>${emp[i].last_name}</td>
+        <td>${emp[i].email}</td>
+        <td>${emp[i].gender}</td>
+        <td>${emp[i].phone}</td>
+        
+       </tr>`
+       i=i+1;
     }
     document.getElementById("Prakash").innerHTML = rows;
   };
